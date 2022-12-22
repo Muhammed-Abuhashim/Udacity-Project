@@ -6,7 +6,7 @@ install all project dependencies with npm install
 start the development server with cd my-app
 and then with npm start
 
-
+```
 What You're Getting
 ├── CONTRIBUTING.md
 ├── README.md - This file.
@@ -31,5 +31,6 @@ What You're Getting
             ├── books.js # It contains books and their details of where they belong to which shelf, their name and author
             ├── list_book.js # It contains books and puts each on its own shelf
             └── search.js # It searches for each book and places it on a shelf determined by the user
+```
 
 Important : there are some lags when you move the book from any shelf to another like a sec and when you search for any book you need and open the drop list and change from (none) to anything else from shelves like(currently read, want to read, read) wait just a couple of min to see the changes from (none) to the others shelves.
