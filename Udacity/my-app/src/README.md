@@ -1,4 +1,4 @@
-This is the final assessment project for Udacity's React Fundamentals course.
+# This is the final assessment project for Udacity's React Fundamentals course.
 
 To get started developing right away:
 
@@ -33,4 +33,5 @@ What You're Getting
             └── search.js # It searches for each book and places it on a shelf determined by the user
 ```
 
-Important : there are some lags when you move the book from any shelf to another like a sec and when you search for any book you need and open the drop list and change from (none) to anything else from shelves like(currently read, want to read, read) wait just a couple of min to see the changes from (none) to the others shelves.
+# Important : 
+There are some lags when you move the book from any shelf to another like a sec and when you search for any book you need and open the drop list and change from (none) to anything else from shelves like(currently read, want to read, read) wait just a couple of min to see the changes from (none) to the others shelves.
