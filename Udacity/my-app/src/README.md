@@ -1,5 +1,3 @@
-# This is the final assessment project for Udacity's React Fundamentals course.
-
 # Udacity-Project
 MyReads: A Book Tracking App : MyReads is a bookshelf application that allows us to add, 
 select and categorize books we have read, are currently reading, or want to read.
@@ -38,10 +36,3 @@ and then with npm start
             ├── list_book.js # It contains books and puts each on its own shelf
             └── search.js # It searches for each book and places it on a shelf determined by the user
 ```
-
-
-# Important : 
-There are some lags when you move the book from any shelf to another like a sec and when you search for any book you need and open the drop list and change from (none) to anything else from shelves like(currently read, want to read, read) wait just a couple of min to see the changes from (none) to the others shelves.
-
-
-
