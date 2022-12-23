@@ -1,5 +1,6 @@
 # Udacity-Project
-MyReads: A Book Tracking App
+MyReads: A Book Tracking App : MyReads is a bookshelf application that allows us to add, 
+select and categorize books we have read, are currently reading, or want to read.
 
 This is the final assessment project for Udacity's React Fundamentals course.
 
