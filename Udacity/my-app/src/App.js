@@ -12,15 +12,14 @@ import ListBooks from './components/list_books';
 function App() {
   const [booklist,setbooklist] = useState([]);
   const [search,setsearch] = useState([]);
-  const [bfsearch,setbfsearch] = useState([]);
+  const [booklist_for_search,setbooklist_for_search] = useState([]);
 
   //useEffect to handle to loading books
-  useEffect(()=>{
-    const x = async ()=>{
-      const books = await BooksAPI.getAll();
+  useEffect(() => {
+    BooksAPI.getAll().then((books) => {
       setbooklist(books);
-    }; x();
-  },[]);
+    });
+  }, []);
 
   // change book shelf
   const change_shelf_book = async(book,book_shelf) =>{
@@ -29,7 +28,7 @@ function App() {
       const books = await BooksAPI.getAll();
       setbooklist(books);
     }; x();
-    handle_book_search(search);
+    // handle_book_search(search);
   };
 
   // search books
@@ -39,26 +38,28 @@ function App() {
     handle_book_search(search);
   }
 
+
+  // for the last comment in review here app.js the parent file and i have to state booklist and booklist_for_search and i send everyone to Booklist(main) and searchPage
   const handle_book_search = async(search)=>{
     const res = await BooksAPI.search(search);
     try {
       if(res && !res.error){
-        setbfsearch(res.map((books_search)=> {
+        setbooklist_for_search(res.map((books_search)=> {
           booklist?.forEach((book)=> {
             if(books_search.id === book.id) books_search.shelf = book.shelf ;
           })
           return books_search;
         }));
         if(res?.error){
-          setbfsearch([]);
+          setbooklist_for_search([]);
         }
       }
       else{
-        setbfsearch([]);
+        setbooklist_for_search([]);
       }
     }
     catch (error) {
-      setbfsearch([]);
+      setbooklist_for_search([]);
     }
   }
 
@@ -73,8 +74,8 @@ function App() {
             }>
           </Route>
 
-          <Route  path = "/search" element={<Search handlesearch={handlesearch} 
-            search={search} bfsearch={bfsearch} change_shelf_book={change_shelf_book} />}>
+          <Route  path = "/search" element={<Search booklist_for_search={booklist_for_search} change_shelf_book={change_shelf_book} 
+          handlesearch={handlesearch} search={search} />}>
           </Route>
         </Routes>
       </div>
