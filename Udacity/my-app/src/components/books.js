@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Books = ({Book,change_shelf_book}) => { 
     return (
@@ -34,5 +35,8 @@ const Books = ({Book,change_shelf_book}) => {
     )
 }
 
+Books.propTypes = {
+    Book: PropTypes.element.isRequired
+  };
 
 export default Books;
