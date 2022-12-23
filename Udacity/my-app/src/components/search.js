@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Books from "./books";
 
-const Search = ({handlesearch,search,bfsearch,change_shelf_book}) => {
+const Search = ({handlesearch,search,booklist_for_search,change_shelf_book}) => {
     return(
             <div className="search-books">
               <div className="search-books-bar">
@@ -18,7 +18,7 @@ const Search = ({handlesearch,search,bfsearch,change_shelf_book}) => {
               <div  className="search-books-results">
                 <ol className="books-grid">
                     {
-                      bfsearch.map((Book)=>(
+                      booklist_for_search.map((Book)=>(
                         <Books key={Book.id} Book={Book} change_shelf_book={change_shelf_book} />
                       ))
                     }
